@@ -1,0 +1,20 @@
+{
+  "name": "marionetteBase",
+  "version": "0.0.0",
+  "dependencies": {
+    "almond" : "0.3.0",
+    "jquery": "~2",
+    "requirejs": "~2.1.10",
+    "requirejs-text": "~2.0.10",
+    "backbone": "~1.1.2",
+    "backbone.marionette": "2.4.1",
+    "backbone.blazer": "0.0.5",
+    "underscore": "1.6.0",
+    "modernizr": "~2.7.1",
+    "mocha": "~1.17.1",
+    "chai": "~1.9.0",
+    "sinon": "~1.7.3"
+  },
+  "devDependencies": {},
+  "directory": "bower_components"
+}
