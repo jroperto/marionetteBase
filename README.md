@@ -1,6 +1,8 @@
 Marionette Base
 ============
 
+[![Join the chat at https://gitter.im/jroperto/marionetteBase](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jroperto/marionetteBase?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Base structure generated with: ##
 
   * http://yeoman.io/
