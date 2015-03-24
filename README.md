@@ -1,9 +1,6 @@
 Marionette Base
 ============
 
-[ ![Codeship Status for huevo/vpa-futbol-backend](https://codeship.com/projects/4b2dee80-9220-0132-73f3-668629e00ab9/status?branch=develop)](https://codeship.com/projects/61810)
-
-
 ## Base structure generated with: ##
 
   * http://yeoman.io/
