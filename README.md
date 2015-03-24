@@ -1,4 +1,4 @@
-Marionette Base
+Marionette Base [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/jroperto/marionetteBase?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 ============
 
 ## Base structure generated with: ##
