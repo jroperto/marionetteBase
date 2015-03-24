@@ -1,9 +1,9 @@
 define([
-    'baseController', 'underscore',
+    'baseRoute', 'underscore',
     'apps/home/views/home.layout', 'apps/home/views/home.view'
-], function(BaseController, _, HomeLayout, HomeView) {
+], function(BaseRoute, _, HomeLayout, HomeView) {
 
-    return BaseController.extend({
+    return BaseRoute.extend({
 
         getLayoutChannelName: function() {
             return 'homeLayout';

@@ -1,9 +1,9 @@
 define([
-    'baseController', 'underscore',
+    'baseRoute', 'underscore',
     'apps/contact/views/contact.layout', 'apps/contact/views/contact.view'
-], function(BaseController, _, ContactLayout, ContactView) {
+], function(BaseRoute, _, ContactLayout, ContactView) {
 
-    return BaseController.extend({
+    return BaseRoute.extend({
 
         getLayoutChannelName: function() {
             return 'contactLayout';

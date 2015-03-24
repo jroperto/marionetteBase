@@ -40,8 +40,8 @@ require.config({
 
 
         /* Aliases for common scripts */
-        baseController: '_common/base.controller',
-        spinner:        '_decorator/spinner.view'
+        baseRoute: '_common/base.route',
+        spinner:   '_decorator/spinner.view'
 
     }
 });
