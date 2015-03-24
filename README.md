@@ -14,6 +14,10 @@ Marionette Base [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
   * bower install
   * npm i almond bower grunt grunt-bower-requirejs grunt-cli grunt-contrib-clean grunt-contrib-concat grunt-contrib-connect grunt-contrib-copy grunt-contrib-cssmin grunt-contrib-htmlmin grunt-contrib-imagemin grunt-contrib-jshint grunt-contrib-uglify grunt-exec grunt-mocha grunt-open grunt-requirejs grunt-usemin jshint-stylish matchdep mocha-phantomjs time-grunt --save-dev
 
+## Grunt tasks ##
+  
+  * Build APP: `grunt build`
+  * Run development server: `grunt`
 
 ## Knowledge base about Marionette ##
 

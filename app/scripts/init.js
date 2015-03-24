@@ -3,7 +3,7 @@ require.config({
     baseUrl: '/scripts',
 
     /* starting point for application */
-    deps: ['marionette', 'bootstrap', 'blazer', 'main'],
+    deps: ['marionette', 'bootstrap', 'main'],
 
 
     shim: {

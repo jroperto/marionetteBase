@@ -1,5 +1,5 @@
 define([
-    'marionette', 'underscore', 'backbone'
+    'marionette', 'underscore', 'backbone', 'blazer'
 ], function(Marionette, _, Backbone) {
 
     return Backbone.Blazer.Route.extend({
