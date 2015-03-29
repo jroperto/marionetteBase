@@ -5,7 +5,7 @@ define([
     'apps/contact/contact.app'
 ], function(Marionette, _, Backbone, MainLayout, HomeApp, ContactApp) {
 
-    var VpaFutbolApp = Marionette.Application.extend({
+    var App = Marionette.Application.extend({
 
         SUB_APPS: [
             HomeApp,
@@ -84,7 +84,7 @@ define([
         }
     });
 
-    var app = new VpaFutbolApp();
+    var app = new App();
 
     return app;
 
