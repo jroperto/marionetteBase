@@ -1,9 +1,14 @@
 {
   "name": "marionetteBase",
-  "version": "0.0.0",
+  "description": "Base marionette application architecture",
+  "authors": [
+    "Juan Roperto <juan.roperto@gmail.com> (https://github.com/jroperto)"
+  ],
+  "version": "0.1.0",
   "dependencies": {
     "almond" : "0.3.0",
     "jquery": "~2",
+    "jquery-serialize-object": "2.4.5",
     "requirejs": "~2.1.10",
     "requirejs-text": "~2.0.10",
     "backbone": "~1.1.2",
@@ -16,5 +21,14 @@
     "sinon": "~1.7.3"
   },
   "devDependencies": {},
-  "directory": "bower_components"
+  "directory": "bower_components",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jroperto/marionetteBase.git"
+  },
+  "ignore": [],
+  "keywords": [
+    "marionette", "architecture", "base", "application", "app"
+  ],
+  "license": "MIT"
 }
