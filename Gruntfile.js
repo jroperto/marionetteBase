@@ -15,18 +15,16 @@ module.exports = function (grunt) {
 	// show elapsed time at the end
 	require('time-grunt')(grunt);
 
-	// configurable paths
-	var yeomanConfig = {
-		app: 'app',
-		dist: 'dist'
-	};
 
 	grunt.initConfig({
-		yeoman: yeomanConfig,
+		buildConfig: {
+			app: 'app',
+			dist: 'dist'
+		},
 
 		open : {
 			dev : {
-				path: 'http://localhost:8888',
+				path: 'http://localhost:8085',
 				app: 'chrome'
 			}
 		},
@@ -41,8 +39,8 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				options: {
-					port: 8888,
-					base: '<%= yeoman.app %>'
+					port: 8085,
+					base: '<%= buildConfig.app %>'
 				}
 			}
 
@@ -62,7 +60,7 @@ module.exports = function (grunt) {
 		},
 
 		clean: {
-			dist: ['.tmp', '<%= yeoman.dist %>/*'],
+			dist: ['.tmp', '<%= buildConfig.dist %>/*'],
 			server: '.tmp'
 		},
 
@@ -74,8 +72,8 @@ module.exports = function (grunt) {
 			},
 			all: [
 				'Gruntfile.js',
-				'<%= yeoman.app %>/scripts/{,*/}*.js',
-				'!<%= yeoman.app %>/scripts/_vendor/*',
+				'<%= buildConfig.app %>/scripts/{,*/}*.js',
+				'!<%= buildConfig.app %>/scripts/_vendor/*',
 				'test/spec/{,*/}*.js'
 			]
 		},
@@ -86,21 +84,21 @@ module.exports = function (grunt) {
 			dist: {
 				// Options: https://github.com/jrburke/r.js/blob/master/build/example.build.js
 				options: {
-					baseUrl: '<%= yeoman.app %>/scripts',
+					baseUrl: '<%= buildConfig.app %>/scripts',
 					optimize: 'uglify2',
 					paths: {
 						'templates': '../../.tmp/scripts/templates'
 					},
 					include: 'init',
 					name: '../bower_components/almond/almond',
-					out: '<%= yeoman.dist %>/scripts/init.js',
+					out: '<%= buildConfig.dist %>/scripts/init.js',
 					almond: true,
 					replaceRequireScript: [{
-						files: ['<%= yeoman.dist %>/index.html'],
+						files: ['<%= buildConfig.dist %>/index.html'],
 						module: 'init'
 					}],
 
-					mainConfigFile: '<%= yeoman.app %>/scripts/init.js',
+					mainConfigFile: '<%= buildConfig.app %>/scripts/init.js',
 					preserveLicenseComments: false,
 					useStrict: true,
 					wrap: true,
@@ -113,17 +111,17 @@ module.exports = function (grunt) {
 		},
 
 		useminPrepare: {
-			html: '<%= yeoman.app %>/index.html',
+			html: '<%= buildConfig.app %>/index.html',
 			options: {
-				dest: '<%= yeoman.dist %>'
+				dest: '<%= buildConfig.dist %>'
 			}
 		},
 
 		usemin: {
-			html: ['<%= yeoman.dist %>/{,*/}*.html'],
-			css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
+			html: ['<%= buildConfig.dist %>/{,*/}*.html'],
+			css: ['<%= buildConfig.dist %>/styles/{,*/}*.css'],
 			options: {
-				dirs: ['<%= yeoman.dist %>']
+				dirs: ['<%= buildConfig.dist %>']
 			}
 		},
 
@@ -131,9 +129,9 @@ module.exports = function (grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: '<%= yeoman.app %>/images',
-					src: '{,*/}*.{png,jpg,jpeg}',
-					dest: '<%= yeoman.dist %>/images'
+					cwd: '<%= buildConfig.app %>/images',
+					src: '{,*/}*.{png,jpg,jpeg,gif}',
+					dest: '<%= buildConfig.dist %>/images'
 				}]
 			}
 		},
@@ -141,10 +139,10 @@ module.exports = function (grunt) {
 		cssmin: {
 			dist: {
 				files: {
-					'<%= yeoman.dist %>/styles/main.css': [
+					'<%= buildConfig.dist %>/styles/main.css': [
 						'.tmp/styles/{,*/}*.css',
-						'<%= yeoman.app %>/styles/{,*/}*.css',
-						'!<%= yeoman.app %>/styles/vendor/*'
+						'<%= buildConfig.app %>/styles/{,*/}*.css',
+						'!<%= buildConfig.app %>/styles/vendor/*'
 					]
 				}
 			}
@@ -165,9 +163,9 @@ module.exports = function (grunt) {
 				},
 				files: [{
 					expand: true,
-					cwd: '<%= yeoman.app %>',
+					cwd: '<%= buildConfig.app %>',
 					src: '*.html',
-					dest: '<%= yeoman.dist %>'
+					dest: '<%= buildConfig.dist %>'
 				}]
 			}
 		},
@@ -177,8 +175,8 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					dot: true,
-					cwd: '<%= yeoman.app %>',
-					dest: '<%= yeoman.dist %>',
+					cwd: '<%= buildConfig.app %>',
+					dest: '<%= buildConfig.dist %>',
 					src: [
 						'*.{ico,txt}',
 						'.htaccess',
@@ -191,7 +189,7 @@ module.exports = function (grunt) {
 
 		bower: {
 			all: {
-				rjsConfig: '<%= yeoman.app %>/scripts/main.js'
+				rjsConfig: '<%= buildConfig.app %>/scripts/main.js'
 			}
 		}
 
