@@ -1,7 +1,7 @@
 define([
-    'baseRoute', 'underscore',
+    'underscore', 'backbone', 'baseRoute',
     'apps/home/views/home.layout', 'apps/home/views/home.view'
-], function(BaseRoute, _, HomeLayout, HomeView) {
+], function(_, Backbone, BaseRoute, HomeLayout, HomeView) {
 
     return BaseRoute.extend({
 
@@ -10,10 +10,10 @@ define([
         },
 
         initializeLayout: function () {
-            this.layout = new HomeLayout()
+            this.layout = new HomeLayout();
         },
 
-        execute: function(routeData) {
+        execute: function() {
             Backbone.Wreqr.radio.commands.execute( 'navbarChannel', 'menu:select', 'homeMenu' );
             this.layoutChannel.commands.execute( 'content:render', new HomeView() );
         }

@@ -1,7 +1,7 @@
 define([
-    'marionette',
+    'backbone', 'marionette',
     'apps/contact/list/contact.list.route', 'apps/contact/create/contact.create.route'
-], function(Marionette, ContactListRoute, ContactCreateRoute) {
+], function(Backbone, Marionette, ContactListRoute, ContactCreateRoute) {
 
     return Marionette.Object.extend({
 

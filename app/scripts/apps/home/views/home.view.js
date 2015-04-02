@@ -1,6 +1,6 @@
 define([
-    'marionette', 'text!tpl/home/home.content.html'
-], function(Marionette, homeTemplate) {
+    'underscore', 'marionette', 'text!tpl/home/home.content.html'
+], function(_, Marionette, homeTemplate) {
 
     return Marionette.ItemView.extend({
 

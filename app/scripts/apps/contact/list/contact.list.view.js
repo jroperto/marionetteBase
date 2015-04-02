@@ -1,7 +1,7 @@
 define([
-    'marionette',
+    'underscore', 'marionette',
     'text!tpl/contact/list/contact.list.html', 'text!tpl/contact/list/contact.row.html'
-], function(Marionette, contactListTemplate, contactRowTemplate) {
+], function(_, Marionette, contactListTemplate, contactRowTemplate) {
 
     var ContactRowView = Marionette.ItemView.extend({
 

@@ -1,8 +1,8 @@
 define([
-    'baseRoute', 'underscore',
+    'underscore', 'backbone', 'baseRoute',
     'apps/contact/contact.layout', 'apps/contact/list/contact.list.view', 'spinner',
     'apps/contact/entities/contact.collection'
-], function(BaseRoute, _, ContactLayout, ContactCollectionView, Spinner, ContactCollection) {
+], function(_, Backbone, BaseRoute, ContactLayout, ContactCollectionView, Spinner, ContactCollection) {
 
     return BaseRoute.extend({
 

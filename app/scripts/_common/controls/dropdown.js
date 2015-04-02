@@ -90,7 +90,7 @@ define(['jquery', 'marionette', 'underscore'], function($, Marionette, _) {
                 var selected = false;
 
                 if(this.selected !== '') {
-                    if(item.attributes[this.value] == this.selected) {
+                    if(item.attributes[this.value] === this.selected) {
                         selected = true;
                     }
                 }

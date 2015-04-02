@@ -59,7 +59,7 @@ define([
                 }
 
                 var field = this.$(fieldConfig.fieldSelector);
-                var validationResult = this.validationTypes[validation.type](field, validation, this);
+                var validationResult = _.bind(this.validationTypes[validation.type], this, field, validation);
                 return isFieldStillValid && validationResult;
 
             }, isFieldValid, this);
@@ -82,7 +82,7 @@ define([
 
             if (isValid) {
                 field.parent().removeClass(errorClasses);
-                self.$('#' + fieldId + '-icon').remove();
+                this.$('#' + fieldId + '-icon').remove();
                 field.tooltip('destroy');
                 return true;
             } else {
@@ -95,12 +95,12 @@ define([
             }
         },
 
-        _validateNotEmpty: function(field, validation, self) {
-            return self._processValidationResult( field, validation, !_.isEmpty(field.val()) );
+        _validateNotEmpty: function(field, validation) {
+            return this._processValidationResult( field, validation, !_.isEmpty(field.val()) );
         },
 
-        _validateMaxLength: function(field, validation, self) {
-            return self._processValidationResult( field, validation, field.val().length <= validation.maxLength );
+        _validateMaxLength: function(field, validation) {
+            return this._processValidationResult( field, validation, field.val().length <= validation.maxLength );
         }
 
     });

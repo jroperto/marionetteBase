@@ -1,8 +1,8 @@
 define([
-    'baseRoute', 'underscore',
+    'underscore', 'backbone', 'baseRoute',
     'apps/contact/contact.layout', 'apps/contact/create/contact.createForm.view', 'spinner',
     'apps/contact/entities/contact.model'
-], function(BaseRoute, _, ContactLayout, ContactCreateView, Spinner, ContactModel) {
+], function(_, Backbone, BaseRoute, ContactLayout, ContactCreateView, Spinner, ContactModel) {
 
     return BaseRoute.extend({
 
@@ -14,7 +14,7 @@ define([
             this.layout = new ContactLayout();
         },
 
-        execute: function(routeData) {
+        execute: function() {
             Backbone.Wreqr.radio.commands.execute( 'navbarChannel', 'menu:select', 'contactMenu' );
             this.layoutChannel.commands.execute( 'content:render', new ContactCreateView({ model: new ContactModel() }));
         }

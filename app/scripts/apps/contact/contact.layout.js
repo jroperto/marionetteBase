@@ -1,6 +1,6 @@
 define([
-    'marionette', 'text!tpl/contact/contact.layout.html'
-], function(Marionette, contactLayoutTemplate) {
+    'underscore', 'marionette', 'text!tpl/contact/contact.layout.html'
+], function(_, Marionette, contactLayoutTemplate) {
 
     return Marionette.LayoutView.extend({
 

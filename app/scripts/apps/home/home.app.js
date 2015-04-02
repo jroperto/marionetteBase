@@ -1,6 +1,6 @@
 define([
-    'marionette', 'apps/home/home.route'
-], function(Marionette, HomeRoute ) {
+    'backbone', 'marionette', 'apps/home/home.route'
+], function(Backbone, Marionette, HomeRoute ) {
 
     return Marionette.Object.extend({
 

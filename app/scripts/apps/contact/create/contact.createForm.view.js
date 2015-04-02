@@ -1,7 +1,7 @@
 define([
-    'marionette', '_common/behaviors/formValidator.behavior',
+    'underscore', 'marionette', '_common/behaviors/formValidator.behavior',
     'text!tpl/contact/form/contact.createForm.html', 'formSerializer'
-], function(Marionette, FormValidator, fieldFormTemplate) {
+], function(_, Marionette, FormValidator, fieldFormTemplate) {
 
 
     return Marionette.ItemView.extend({
